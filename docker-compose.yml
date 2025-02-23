@@ -1,0 +1,21 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kelasonline-order
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8001:80"
+    environment:
+      - DB_HOST=host.docker.internal
+      - DB_PORT=3306
+      - DB_DATABASE=micro_kelasonline_order_payment
+      - DB_USERNAME=root
+      - DB_PASSWORD=
+    networks:
+      - laravel_network
+
+networks:
+  laravel_network:

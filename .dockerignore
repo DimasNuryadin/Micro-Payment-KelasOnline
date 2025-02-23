@@ -1,0 +1,9 @@
+node_modules
+vendor
+.git
+.dockerignore
+Dockerfile
+storage/*.key
+public/storage
+npm-debug.log
+yarn-error.log
